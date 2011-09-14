@@ -1,22 +1,24 @@
 @charset "utf-8";
-#share-page, #send-document {
-  border: 3px solid lightgrey;
-  padding: 10px;
+
+.smover {
+	border: 3px solid lightgrey;
+	padding: 10px;
 }
-#share-page ul, #send-document ul {
-  list-style: none;
-  margin-top: 10px;
-  width: 100%;
-  margin: 0;
-  float: left;
-  display: block;
+
+.smover ul {
+	list-style: none;
+	margin-top: 10px;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
 }
-#share-page ul li, #send-document ul li {
-  display: block;
-  float: left;
+
+.smover ul li {
+	float: left;
 }
-#share-page ul li a, #send-document ul li a {
-  display: block;
-  margin-top: 5px;
-  padding: 5px 5px 0;
+
+.smover ul li a {
+	display: block;
+	margin-top: 5px;
+	padding: 5px 5px 0;
 }
