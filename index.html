@@ -1,41 +1,47 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 	<head>
-		<title>SMover Demo</title>
-		<!-- generic demo styles -->
-		<link href="./_assets/css/reset.css" media="screen" rel="stylesheet" type="text/css" />
-		<link href="./_assets/css/demo.css" media="screen" rel="stylesheet" type="text/css" />
-		<!-- SyntaxHighliter files / scripts -->
-		<script type="text/javascript" src="./_assets/js/SyntaxHighlighter/scripts/shCore.js"></script> 
-		<script type="text/javascript" src="./_assets/js/SyntaxHighlighter/scripts/shBrushJScript.js"></script> 
-		<link type="text/css" rel="stylesheet" href="./_assets/js/SyntaxHighlighter/styles/shCoreDefault.css"/> 
-		<script type="text/javascript">
-			SyntaxHighlighter.defaults["toolbar"] = false;
-			SyntaxHighlighter.all();
-		</script> 
-		<!-- smover css / javascript -->
-		<link href="./css/smover.css" media="screen" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="./js/jquery.js"></script>
-		<script type="text/javascript" src="./js/smover/hoverintent.js"></script>
-		<script type="text/javascript" src="./js/smover/smover.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('#share-page').smover();
-				$('#send-document').smover({
-					fillerText    : ' to ',
-					mouseoutDelay : 3000
-				});
-			});
-		</script>
+
+		<title>SMover, a jQuery Social Media Plugin</title>
+		
+		<!-- generic demo style -->
+		<link rel="stylesheet" href="./demo/css/reset.css" />
+		<link rel="stylesheet" href="./demo/css/demo.css" />
+		
+		<!-- styles -->
+		<link rel="stylesheet" href="./css/smover.css" />
+		
+		<!-- scripts -->
+		<script src="./js/jquery-1.4.3.min.js"></script>
+		<script src="./js/smover/hoverintent.js"></script>
+		<script src="./js/smover/jquery.smover.js"></script>
+		<script src="./js/scripts.js"></script>
+		
+		<!-- generic demo script -->
+		<script src="./demo/js/demo.js"></script>
+		
+		<!-- shiv me up baby! -->
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->		
+		
 	</head>
 	<body>
+		<a href="http://github.com/beneverard/SMover"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 123;" src="https://d3nwyuy0nl342s.cloudfront.net/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+		<div id="header">
+			<div id="header-wrapper">
+				<h1>SMover</h1>
+				<h2>A jQuery Social Media Plugin</h2>
+				<p><a href="#introduction">Introduction</a> | <a href="#demo">Demo</a> | <a href="#installation">Installation</a> |  <a href="#customisation">Customisation</a> | <a href="#feedback">Feedback</a></p>
+			</div>
+			<div class="gradient">&nbsp;</div>
+		</div>
 		<div id="wrapper">
-			<h1>SMover Demo</h1>
+			<h2 id="introduction">Introduction</h1>
 			<p>SMover (<strong>S</strong>ocial <strong>M</strong>edia h<strong>over</strong>) is a jQuery plugin that hides social media icons away, whilst allowing super smooth and easy access to them when required. Whilst the main use for this plugin is for social media icons, it has other uses too.</p>
-			<h2 id="examples">Examples</h2>
-			<h3 id="basic-use">Basic Use</h3>
-			<p>SMover in it's most basic form can be used out of the box for social media links:</p>
-			<div id="share-page">
+			<h2 id="demo">Demo</h2>
+			<p>SMover in it's most basic form can be used out of the box for social media links, hover over the title:</p>
+			<div class="smover" id="share-page">
 				<span>Share Page</span>
 				<ul style="display: none;">
 					<li><a title="Delicious" href="#"><img alt="Share with Delicious" src="./images/social-icons/delicious.png"></a></li>
@@ -44,80 +50,61 @@
 					<li><a title="StumbleUpon" href="#"><img alt="Share with StumbleUpon" src="./images/social-icons/stumbleupon.png"></a></li>
 					<li><a title="Twitter" href="#"><img alt="Share with Twitter" src="./images/social-icons/twitter.png"></a></li>
 				</ul>
-				<div class="clear-fix">&nbsp;</div>
+				<div class="clearfix">&nbsp;</div>
 			</div>
-			<h4>Usage</h4>
-			<p>JavaScript</p>
-			<pre class="brush: js">
-				$(document).ready(function() {
-					$('#share-page').smover();
-				});</pre>
-			<p>HTML</p>
-			<pre class="brush: js">
-			<div id="share-page">
-				<span>Share Page</span>
-				<ul style="display: none;">
-					<li><a title="Delicious" href="#"><img alt="Share with Delicious" src="./images/social-icons/delicious.png"></a></li>
-					<li><a title="Digg" href="#"><img alt="Share with Digg" src="./images/social-icons/digg.png"></a></li>
-					<li><a title="Facebook" href="#"><img alt="Share with Facebook" src="./images/social-icons/facebook.png"></a></li>
-					<li><a title="StumbleUpon" href="#"><img alt="Share with StumbleUpon" src="./images/social-icons/stumbleupon.png"></a></li>
-					<li><a title="Twitter" href="#"><img alt="Share with Twitter" src="./images/social-icons/twitter.png"></a></li>
-				</ul>
-				<div class="clear-fix">&nbsp;</div>
-			</div></pre>
-			<h3 id="other-uses">Other Uses</h3>
-			<p>SMover is actually so basic that it can be used for many purposed, in this instance we're hiding away icons that signify actions on a document.</p>
-			<p>Notice the fillerText has changed to ' to ' and the mouseoutDelay has increased to 3000 milliseconds.</p>
-			<div id="send-document">
+			<h3>Other Uses</h3>
+			<p>SMover is so basic that it can be used for many purposes, in this instance we're hiding away icons that signify actions on a document.</p>
+			<p>We've changed a few options here, we've changed <code>fillerText</code> to the string <code>' to '</code> and the <code>mouseoutDelay</code> has increased to 3000 milliseconds, hover over the title:</p>
+			<div  class="smover" id="send-document">
 				<span>Send Document</span>
 				<ul style="display: none;">
 					<li><a title="Printer" href="#"><img alt="Send to Printer" src="./images/pixel-mixer-basic/print_32.png"></a></li>
 					<li><a title="Mail Recipient" href="#"><img alt="Send to Mail Recipient" src="./images/pixel-mixer-basic/letter_32.png"></a></li>
 					<li><a title="Trash" href="#"><img alt="Send to Trash" src="./images/pixel-mixer-basic/trash_32.png"></a></li>
 				</ul>
-				<div class="clear-fix">&nbsp;</div>
+				<div class="clearfix">&nbsp;</div>
 			</div>
-			<h4>Usage</h4>
-			<p>JavaScript</p>
-			<pre class="brush: js">
-				$(document).ready(function() {
-					$('#send-document').smover({
-						fillerText    : ' to ',
-						mouseoutDelay : 3000
-					});
-				});</pre>
-			<p>HTML</p>
-			<pre class="brush: js">
-			<div id="send-document">
-				<span>Send Document</span>
-				<ul style="display: none;">
-					<li><a title="Printer" href="#"><img alt="Send to Printer" src="./images/pixel-mixer-basic/print_32.png"></a></li>
-					<li><a title="Mail Recipient" href="#"><img alt="Send to Mail Recipient" src="./images/pixel-mixer-basic/letter_32.png"></a></li>
-					<li><a title="Trash" href="#"><img alt="Send to Trash" src="./images/pixel-mixer-basic/trash_32.png"></a></li>
-				</ul>
-				<div class="clear-fix">&nbsp;</div>
-			</div></pre>
-			<h3>With thanks...</h3>
+			<h2 id="installation">Installation</h2>
+			<p>Installation is really easy, simply define your HTML like this:</p>
+<pre>&lt;div class=&quot;smover&quot;&gt;
+	&lt;span&gt;Share Page&lt;/span&gt;
+	&lt;ul style=&quot;display: none;&quot;&gt;
+		&lt;li&gt;&lt;a title=&quot;Delicious&quot; href=&quot;#&quot;&gt;&lt;img alt=&quot;Share with Delicious&quot; src=&quot;/path/to/icon/delicious.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a title=&quot;Digg&quot; href=&quot;#&quot;&gt;&lt;img alt=&quot;Share with Digg&quot; src=&quot;/path/to/icon/digg.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a title=&quot;Facebook&quot; href=&quot;#&quot;&gt;&lt;img alt=&quot;Share with Facebook&quot; src=&quot;/path/to/icon/facebook.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a title=&quot;StumbleUpon&quot; href=&quot;#&quot;&gt;&lt;img alt=&quot;Share with StumbleUpon&quot; src=&quot;/path/to/icon/stumbleupon.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a title=&quot;Twitter&quot; href=&quot;#&quot;&gt;&lt;img alt=&quot;Share with Twitter&quot; src=&quot;/path/to/icon/twitter.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class=&quot;clearfix&quot;&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;</pre>
+			<p>And now we'll need to initialise the plugin against our HTML:</p>
+<pre>$('.smover').smover();</pre>
+			<h2 id="customisation">Customisation</h2>
+			<p>SMover is customisable! Use the following options to modify how SMover works:</p>
+			<h3>Options</h3>
+			<p><strong>titleElement</strong> - option, default: 'span'
+			<br />Sets the title element selector, of which the title will change depending on which icon is hovered. Must be a child of the main SMover element.</p>
+			<p><strong>linksElement</strong> - option, default: 'ul'
+			<br />Sets the links element selector, used to fade in and out during hover.</p>
+			<p><strong>fillerText</strong> - option, default: ' on '
+			<br />The string of which is used to fill the default title and the hovered item title.</p>
+			<p><strong>mouseoutDelay</strong> - option, default: 500
+			<br />The length of time (in milliseconds) the SMover element will remain open after the mouse out event has fired.</p>
+			<h2 id="feedback">Feedback</h2>
+			<p>We're all on the planet to learn, if you feel improvements can be made to SMover <a href="mailto:hello@beneverard.co.uk">drop me an email</a>, <a href="http://twitter.com/ilmv">tweet me</a> or <a href="http://github.com/beneverard/SMover/">fork the project</a> and put in a pull request. If you want to report a bug head on over to the <a href="https://github.com/beneverard/SMover/issues">GitHub issues page</a>.</p>
+			<h2>With thanks</h2>
 			<p>Many thanks to <a href="http://tydlinka.deviantart.com/art/Set-of-social-icons-109435724">Lenka Melcakova</a> and <a href="http://pixel-mixer.com/">PixelMixer</a> for use of icons.</p>
+		</div>
+		<div id="footer">
+			<div class="gradient">&nbsp;</div>
+			<div id="footer-wrapper">
+				<p>&copy; Ben Everard 2011</p>
+			</div>
 		</div>
 		<!-- ObserverApp tracking code -->
 		<script type="text/javascript" src="http://www.observerapp.com/record.js"></script>
 		<script type="text/javascript">
 			try { Observerapp.record("4cdc246e3268d04a5c0be90f"); } catch(e) {};
 		</script>
-		<!-- Google Analytics tracking code -->
-		<script type="text/javascript">				
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-6229813-12']);
-			_gaq.push(['_trackPageview']);
-			
-			(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
 	</body>
 </html>
-<!-- trying out Git -->
-<!-- trying out more Git -->

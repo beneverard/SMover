@@ -1,11 +1,28 @@
-/*
- * SMover 1.0 - jQuery social media plugin
+ /*!
+ * SMover, a jQuery social media plugin
  *
- * Copyright (c) 2010 Ben Everard (http://beneverard.co.uk/)
- * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) 
- * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
- * * 
+ * Version 1.1 (14/09/2011)
+ *
+ * Copyright (C) 2011 Ben Everard
+ *
+ * http://beneverard.github.com/SMover
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *     
  */
+
+
 (function($){
 
 	$.fn.slideFadeToggle = function(speed, easing, callback) {
