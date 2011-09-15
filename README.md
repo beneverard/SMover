@@ -1,13 +1,27 @@
-SMover
-======
+# SMover, a jQuery Social Media Plugin
 
-## SMover, a jQuery Social Media Plugin
+GitHub  : http://github.com/beneverard/SMover  
+Demo    : http://beneverard.github.com/SMover#demo  
 
-SMover (**S**ocial **M**edia h**over**, pronounced smother) is a jQuery plugin that hides social media icons away, whilst allowing super smooth and easy access to them when required. It's also really small, just 4kb compressed!
+Website : http://beneverard.co.uk  
+Email   : hello@beneverard.co.uk  
+Twitter : @ilmv  
 
-SMover hides away social media (in fact, any) icons and only displays them when the user hovers on a call to action, there are no labels with SMover, however the links title is used to signify the links purpose, check out the demo for a hands on session.
+***
+ 
+Copyright (C) 2011 Ben Everard
 
-License
-=======
+http://beneverard.github.com/SMover
 
-Yet to decide
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
